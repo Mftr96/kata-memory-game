@@ -65,11 +65,15 @@ Voglio provare ad usare javascript plain per la parte di logica del gioco per no
 Lascio Bootstrap come libreria per gestire in modo semplice la divisione degli spazi, Fontawesome per eventuale icone e Axios perchè ho il template di javascript plain (non si sa mai).
 
 ## Esecuzione milestone
+Vado a realizzare un impalcatura di progetto delineando le parti principali: la parte delle carte e la parte con le info del gioco. 
 
 
 ## Roadmap
 🔨:in corso d'opera
 ☑️:fatto
 - impalcatura macrostruttura(div grande, contenitore carte, contenitore scritte di gioco) ☑️
-- realizzazione dinamica carte (scrittura ciclo js)
+- realizzazione dinamica carte (scrittura ciclo js) 🔨
+spaziatura card ☑️
+scrivere ciclo carte ☑️
+scrivere array coppie di carte ☑️
 - scrittura variabili contatore errori, variabile array carte per controllo 
