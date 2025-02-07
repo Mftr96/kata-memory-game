@@ -9,7 +9,7 @@ const helper= {
         for (let i = 1; i <= numberCards; i++) {
             cards.push(i);
         }
-        cards.sort(()=>Math.random() - 0.5);
+        cards.sort(()=>Math.random() - Math.random());
         return cards;
     },
 

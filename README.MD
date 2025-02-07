@@ -72,8 +72,10 @@ Vado a realizzare un impalcatura di progetto delineando le parti principali: la 
 🔨:in corso d'opera
 ☑️:fatto
 - impalcatura macrostruttura(div grande, contenitore carte, contenitore scritte di gioco) ☑️
-- realizzazione dinamica carte (scrittura ciclo js) 🔨
-spaziatura card ☑️
-scrivere ciclo carte ☑️
-scrivere array coppie di carte ☑️
-- scrittura variabili contatore errori, variabile array carte per controllo 
+- scrittura variabili contatore errori, variabile array carte per controllo ☑️
+- realizzazione dinamica carte (scrittura ciclo js) ☑️
+- spaziatura card ☑️
+- scrivere ciclo carte ☑️
+- scrivere array coppie di carte ☑️
+- scrivere funzione on click carta che cambi src ☑️
+- fare controllo sulle carte cliccate: se hanno la stessa immagine rimangono scoperte, in caso contrario, tornano coperte e si incrementa il contatore di errori 
