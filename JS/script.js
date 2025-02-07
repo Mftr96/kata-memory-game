@@ -34,8 +34,24 @@ cards.forEach((card,index)=>{
         let imgCard=cardMatches[indexMatch].path;
         //console.log(imgCard);
         card.children[0].src=`../assets/images/${imgCard}`;
+        showedCards.push(index+1);
+        if(showedCards.length===2){
+            if(showedCards.every((num)=>cardMatches[indexMatch].value.includes(num))){
+                console.log("coppia trovata");
+            }else{
+                setTimeout(()=>{
+                    console.log(showedCards,cardMatches[indexMatch].value,showedCards.every((num)=>cardMatches[indexMatch].value.includes(num)));
+                    console.log("else",cards[showedCards[0]].children[0].src,cards[showedCards[1]].children[0].src);
+                    document.getElementById(`${showedCards[0]}`).src=`../assets/images/back.png`;
+                    document.getElementById(`${showedCards[1]}`).src=`../assets/images/back.png`;
+                    console.log(showedCards[0],showedCards[1]);
+                    //console.log("else",cards[showedCards[0]-1],cards[showedCards[1]-1]);
+                    showedCards=[];
+                    errorsCounter++;
+                    console.log("errori:",errorsCounter);
+                    document.getElementById("errors").innerHTML=errorsCounter;
+                },1000);
+            }
+        }
     }
 })
-
-errorsCounter++;
-console.log(errorsCounter);
