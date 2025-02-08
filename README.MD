@@ -65,7 +65,18 @@ Voglio provare ad usare javascript plain per la parte di logica del gioco per no
 Lascio Bootstrap come libreria per gestire in modo semplice la divisione degli spazi, Fontawesome per eventuale icone e Axios perchè ho il template di javascript plain (non si sa mai).
 
 ## Esecuzione milestone
-Vado a realizzare un impalcatura di progetto delineando le parti principali: la parte delle carte e la parte con le info del gioco. 
+Essendo questa consegna del coding training senza milestone, mi sono preoccupato personalmente di fare una roadmpa del progetto che contenesse i passaggi principali della costruzione.
+Sono andato quindi a creare un macro contenitore "row" con dentro  un contenitore per la parte delle carte e dall'altra parte la sezione delle info.
+
+
+Sono andato poi a fare i collegamenti con i file javascript e css e sono andato a scrivere le variabili di base che mi serviranno nel progetto. Nello specifico sono state delineate le seguenti variabili:
+- <span style="color: #9CDCFE;">errorsCounter</span>: il contatore degli errori durante la partita
+- <span style="color: #9CDCFE;">srcCards</span>: array con dentro gli src delle foto
+- <span style="color: #9CDCFE;">gridCards</span> : le carte di gioco create e mischiate con la funzione shuffleCards di [helper](/JS/helper.js)  
+- <span style="color: #9CDCFE;">grid</span> :il div in pagina che conterrà le carte
+- <span style="color: #9CDCFE;">totalCards</span>: al momento non usata, questa variabiler serve nel caso in cui questo progetto venga ampliato e preveda la possibilità di realizzare partite di diversa difficoltà
+- <span style="color: #9CDCFE;">showedCards</span>: array che conterrà i numeri delle carte che sono state scoperte durante la giocata per fare in modo di effettuare poi il controllo su cardMatches
+- <span style="color: #9CDCFE;">cardMatches</span>: array di oggetti che contiene per ogni oggetto l'src di un'immagine e la coppia di numeri associati che verrà usato nei controlli durante la funzione al clic delle carte 
 
 
 ## Roadmap
@@ -75,7 +86,7 @@ Vado a realizzare un impalcatura di progetto delineando le parti principali: la 
 - scrittura variabili contatore errori, variabile array carte per controllo ☑️
 - realizzazione dinamica carte (scrittura ciclo js) ☑️
 - spaziatura card ☑️
-- scrivere ciclo carte ☑️
 - scrivere array coppie di carte ☑️
 - scrivere funzione on click carta che cambi src ☑️
-- fare controllo sulle carte cliccate: se hanno la stessa immagine rimangono scoperte, in caso contrario, tornano coperte e si incrementa il contatore di errori 
+- fare controllo sulle carte cliccate: se hanno la stessa immagine rimangono scoperte, in caso contrario, tornano coperte e si incrementa il contatore di errori ☑️
+- aggiungere debounce alla funzione click ☑️

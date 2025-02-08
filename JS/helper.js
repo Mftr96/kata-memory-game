@@ -5,6 +5,9 @@ const helper= {
                 </div>`;
     },
     shuffleCards:(numberCards)=>{
+        if(numberCards % 2 !== 0){
+            return console.error("inserire un numero pari");
+        }
         let cards=[];
         for (let i = 1; i <= numberCards; i++) {
             cards.push(i);
@@ -12,6 +15,13 @@ const helper= {
         cards.sort(()=>Math.random() - Math.random());
         return cards;
     },
+     debounce:(func, timeout = 100)=>{
+        let timer;
+        return (...args) => {
+          clearTimeout(timer);
+          timer = setTimeout(() => { func.apply(this, args); }, timeout);
+        }
+      },
 
 };
 
