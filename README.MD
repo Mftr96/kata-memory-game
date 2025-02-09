@@ -65,18 +65,28 @@ Voglio provare ad usare javascript plain per la parte di logica del gioco per no
 Lascio Bootstrap come libreria per gestire in modo semplice la divisione degli spazi, Fontawesome per eventuale icone e Axios perchè ho il template di javascript plain (non si sa mai).
 
 ## Esecuzione milestone
-Essendo questa consegna del coding training senza milestone, mi sono preoccupato personalmente di fare una roadmpa del progetto che contenesse i passaggi principali della costruzione.
-Sono andato quindi a creare un macro contenitore "row" con dentro  un contenitore per la parte delle carte e dall'altra parte la sezione delle info.
+Essendo questa consegna del coding training senza milestone, mi sono preoccupato personalmente di fare una roadmAP del progetto che contenesse i passaggi principali della costruzione.
+Sono andato quindi a:
+1) creare un macro contenitore "row" con dentro  un contenitore per la parte delle carte e dall'altra parte la sezione delle info.
 
 
-Sono andato poi a fare i collegamenti con i file javascript e css e sono andato a scrivere le variabili di base che mi serviranno nel progetto. Nello specifico sono state delineate le seguenti variabili:
+2) ho collegato i file javascript e css e sono andato a scrivere le variabili di base che mi serviranno nel progetto. Nello specifico sono state delineate le seguenti variabili:
 - <span style="color: #9CDCFE;">errorsCounter</span>: il contatore degli errori durante la partita
 - <span style="color: #9CDCFE;">srcCards</span>: array con dentro gli src delle foto
 - <span style="color: #9CDCFE;">gridCards</span> : le carte di gioco create e mischiate con la funzione shuffleCards di [helper](/JS/helper.js)  
 - <span style="color: #9CDCFE;">grid</span> :il div in pagina che conterrà le carte
 - <span style="color: #9CDCFE;">totalCards</span>: al momento non usata, questa variabiler serve nel caso in cui questo progetto venga ampliato e preveda la possibilità di realizzare partite di diversa difficoltà
 - <span style="color: #9CDCFE;">showedCards</span>: array che conterrà i numeri delle carte che sono state scoperte durante la giocata per fare in modo di effettuare poi il controllo su cardMatches
-- <span style="color: #9CDCFE;">cardMatches</span>: array di oggetti che contiene per ogni oggetto l'src di un'immagine e la coppia di numeri associati che verrà usato nei controlli durante la funzione al clic delle carte 
+- <span style="color: #9CDCFE;">cardMatches</span>: array di oggetti che contiene per ogni oggetto l'src di un'immagine e la coppia di numeri associati che verrà usato nei controlli durante la funzione al clic delle carte
+
+3) ho scritto la funzione [createCards](/JS/helper.js) per la generazione dinamica delle carte(inteso come generazione tramite javascript e non creando a priori le carte a mano su HTML) e successivamente ho creato un ciclo che eseguisse il numero di volte necessario la funzione.
+
+
+4) scrivere l'array <span style="color: #9CDCFE;">cardMatches</span> facendo in modo che venisse popolato con un <span style="color: #dcbb6d;">array.map</span> e recuperare le carte tramite selettore query e salvarle nella variabile <span style="color: #9CDCFE;">cards</span> 
+
+5) scrivere per ogni carta tramite ciclo la funzione che al click vada a "girare" la carta,ovvero cambiare l'src della carta(questo per fare in modo che le immagini non siano visibili lato utente se non tramite la funzione al clic ).
+
+** si segnala che la funzione al click è stata aggiunta la funzione <span style="color: #dcbb6d;">debounce</span>per fare in modo che la funzione scritta potesse gestire in modo corretto il clic dell'utente, ossia fare in modo che un utente che clicci in modo rapido le carte non gli venga permesso di battere in velocità la funzione e che quindi rimangano scoperte le carte 
 
 
 ## Roadmap
