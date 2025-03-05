@@ -48,6 +48,7 @@ Buon divertimento 👾
 
 ## considerazioni pre-progetto
 Per la strutturazione del progetto prevedo come primo passaggio la realizzazione della struttura fissa in html: da foto posso immaginare un enorme contenitore che racchiude a sinistra la parte di gioco con le carte (che saranno spazializzate tramite flex) e a destra la parte con il titolo e il conteggio degli errori.
+
 ![foto](/assets/images/output.gif)
 
 Ragionando in codice le regole del gioco avremo :
@@ -90,6 +91,7 @@ Sono andato quindi a:
 
 
 ## Roadmap
+🏳️: da fare
 🔨:in corso d'opera
 ☑️:fatto
 - impalcatura macrostruttura(div grande, contenitore carte, contenitore scritte di gioco) ☑️
@@ -100,3 +102,6 @@ Sono andato quindi a:
 - scrivere funzione on click carta che cambi src ☑️
 - fare controllo sulle carte cliccate: se hanno la stessa immagine rimangono scoperte, in caso contrario, tornano coperte e si incrementa il contatore di errori ☑️
 - aggiungere debounce alla funzione click ☑️
+- alert per condizione di vittoria 🏳️
+- provare event delegation su funzione on click 🏳️
+- scrivere la logica del gioco in uno script php 🏳️

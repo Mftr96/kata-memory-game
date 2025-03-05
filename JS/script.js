@@ -19,14 +19,14 @@ let cardMatches = srcCards.map((src) => ({
     path: src,
     value: [gridCards.pop(), gridCards.pop()],
 }));
-//console.log(cardMatches);
+console.log(cardMatches);
 for (let i = 1; i <= 12; i++) {
     grid.innerHTML += helper.createCard("back.png", i);
 }
 let cards = document.querySelectorAll(".card");
 
 
-
+//CURIOSITÀ: scrivere funzione on click con event delegation 
 cards.forEach((card, index) => {
     //TO-DO : set debounce for click function 
     card.onclick = helper.debounce(() => {
@@ -36,6 +36,7 @@ cards.forEach((card, index) => {
         //console.log(imgCard);
         card.children[0].src = `../assets/images/${imgCard}`;
         showedCards.push(index + 1);
+
         if (showedCards.length === 2) {
             if (showedCards.every(num => cardMatches[indexMatch].value.includes(num)) && showedCards[0] !== showedCards[1]) {
                 //console.log("coppia trovata");
